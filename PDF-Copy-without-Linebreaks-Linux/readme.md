@@ -1,8 +1,8 @@
 # Remove Line Breaks when copying text from PDF (Linux) :
 This bash script removes line breaks when copying text from PDF. It works for both Primary Selection and Clipboard of linux.
 
-Author: Glutanimate (github.com/glutanimate)
-Modifier: Siddharth (github.com/SidMan2001)
+Author: Glutanimate (github.com/glutanimate)  
+Modifier: Siddharth (github.com/SidMan2001)  
 
 # Dependencies :
 1. xsel  
