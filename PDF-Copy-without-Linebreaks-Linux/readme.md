@@ -23,3 +23,4 @@ You can use the pre-compiled clipnotify provided in the repository or compile yo
 `chmod +x "copy_without_linebreaks.sh"`
 4. Double click the script or run by entering in terminal :  
 `.\copy_without_linebreaks.sh`
+5. Copy text in pdf and paste it anywhere. Lines breaks will be removed.
