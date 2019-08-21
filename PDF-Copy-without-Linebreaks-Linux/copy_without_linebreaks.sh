@@ -12,8 +12,12 @@ while ./clipnotify;
 do
   SelectedText="$(xsel)"
   CopiedText="$(xsel -b)"
-  ModifiedTextPrimary="$(echo "$SelectedText" | tr -s '\n' ' ')"
-  ModifiedTextClipboard="$(echo "$CopiedText" | tr -s '\n' ' '  )"
-  echo -n "$ModifiedTextPrimary" | xsel -i
-  echo -n "$ModifiedTextClipboard" | xsel -bi
+  if [[ $SelectedText != *"file:///"* ]]; then
+    ModifiedTextPrimary="$(echo "$SelectedText" | tr -s '\n' ' ')"
+    echo -n "$ModifiedTextPrimary" | xsel -i
+  fi
+  if [[ $CopiedText != *"file:///"* ]]; then
+    ModifiedTextClipboard="$(echo "$CopiedText" | tr -s '\n' ' '  )"
+    echo -n "$ModifiedTextClipboard" | xsel -bi
+  fi
 done
